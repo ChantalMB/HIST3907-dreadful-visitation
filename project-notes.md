@@ -1,0 +1,31 @@
+# Project Notes
+
+**Digitization**
+- Found an already transcribed version of text [here](http://name.umdl.umich.edu/A41826.0001.001)
+- Need to input data points into data set --> one big data set most convinent and shouldn't affect data meaning
+  - ~First going to quickly put all diseases from each week in a list and identify all unique values~
+  - Scratch that I'm just going to scrape the tables from that site using the `pandas.read_html` tool
+    - Will export each table individually as a csv and combine like ones in either R or python
+      - Dates are embedded text in the page --> will have to add them manually
+    - Table structures are used for the menus and layout of this page apparently... --> many junk tables being exported
+      - Downloaded page HTML and just removed the page styling elements --> will now just extract tables from this modified file
+- Casualty counts
+  - Merging data: Cause of death
+    - Testing with just 3 files first --> using `pandas` merge function
+      - Problems:
+        - Need to re-export CSVs without index... maybe add proper headers too
+        - Merge seems to remove some of the rows? --> needed to do outer join instead of inner join
+    - Loading multiple CSVs
+      - Using `glob` function to put all file names in a list, then sorting them by week number so they're in order because `glob`'s order is random --> had to manually rename single digit week numbers to start with '0' so they were recognized for their single digit
+      - Iterated over list of CSVs to load them into a new list of dataframes
+      - Iterated over this list to merge all dataframes into one data set --> because of weird characters will have to go over this final dataframe manually to find duplicates
+  - Merging data: Burials
+    - Putting into list as before --> need to get parishes in one column then burials and plague burials in another
+      - Make list of all parishes, burials, and plague
+      - Make empty dataframe w/ column names
+      - Iterate over each list and add content of position `i` to dataframe column
+    - Week 3 has 3 additional parishes apparently --> they were excess spacing
+    - Going to need to manually go over and merge rows with typos that were marked as separate
+  - Merging data: Christened
+    - Oh god is this formatting weird
+    - Okay not so bad just had to move things around a bit
