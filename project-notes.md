@@ -9,8 +9,8 @@
       - Dates are embedded text in the page --> will have to add them manually
     - Table structures are used for the menus and layout of this page apparently... --> many junk tables being exported
       - Downloaded page HTML and just removed the page styling elements --> will now just extract tables from this modified file
-- Casualty counts
-  - Merging data: Cause of death
+- Merging data
+  - Cause of death
     - Testing with just 3 files first --> using `pandas` merge function
       - Problems:
         - Need to re-export CSVs without index... maybe add proper headers too
@@ -19,13 +19,39 @@
       - Using `glob` function to put all file names in a list, then sorting them by week number so they're in order because `glob`'s order is random --> had to manually rename single digit week numbers to start with '0' so they were recognized for their single digit
       - Iterated over list of CSVs to load them into a new list of dataframes
       - Iterated over this list to merge all dataframes into one data set --> because of weird characters will have to go over this final dataframe manually to find duplicates
-  - Merging data: Burials
+  - Burials
     - Putting into list as before --> need to get parishes in one column then burials and plague burials in another
       - Make list of all parishes, burials, and plague
       - Make empty dataframe w/ column names
       - Iterate over each list and add content of position `i` to dataframe column
     - Week 3 has 3 additional parishes apparently --> they were excess spacing
     - Going to need to manually go over and merge rows with typos that were marked as separate
-  - Merging data: Christened
+  - Christened
     - Oh god is this formatting weird
     - Okay not so bad just had to move things around a bit
+- Cleaning data
+  - Cause of death
+    - Will be placing crimes/non-disease related deaths in another dataset
+    - Will maintain historic spelling as much as possible
+    - Corrected "Go*t" in week 4 to gout
+    - Realized this would be more easily done if I sorted the diseases alphabetically --> data now sorted alphabetically
+    - Merged rows "Childbed" and "Chilbed" together
+    - Merged rows "Chrisomes" and "Chrisoms" --> corrected week 5 count to "17"
+    - Merged rows "Consumtion" and "Consumption"
+    - Merged rows "Flox and Small-pox" and "Flox and Small pox" --> corrected week 15 count to "12"
+    - Merged rows "Gout" and "Gowt"
+    - Merged rows "Head-mould-shot" and "Head mould shot"
+    - Merged rows "Jaundies", "Jaundias", and "Jaundis"
+    - Merged rows "Kingsevill" and "Kingsevil"
+    - Merged rows "Measles" and "Mesles"
+    - Merged rows "Mouldsallen" and "Mouldfallen"
+    - Merged rows "Ovelaid" and "Overlaid"
+    - Merged rows "Rickets", "Rickats", and "Rackets"
+    - Merged row "T mpany" with "Timpany"
+    - Merged row "Trush" with "Thrush"
+    - Merged rows "Tiffick", "Tssick", with "Tissick"
+    - corrected week 16 count of Tissick to "3"
+  - Parish records
+    - Will be removing "buried inside/outside the wall" divisions from data for mapping purposes
+    - Are Redriff and Rothorith parish the same thing?
+    - What happened to St Brides Parish after April?
