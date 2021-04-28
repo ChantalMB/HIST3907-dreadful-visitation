@@ -1,14 +1,3 @@
-# Reflection
-1) what your motivation was for taking the approach that you did
-
-2) what you are intending to show/explain
-
-3) what work you did behind the scenes
-- Difficult discerning 'old' vs 'new' information
-- Writing challenged me because I didn't necessarily want to write a whole essay due to the web-based format, but I wanted to get all of the key points across --> summarising is HARD
-  - I know this is supposed to be a 12-15pg essay-- the thousands of lines of code I wrote for those visualisations are equivalent in my opinion lol
-- Lack of population data to create relative maps with --> Franklin gave Graunt further credit for acknowledging the overall lack of knowledge in Graunt’s day of the size of the population of London (which was rapidly increasing during the 1603–1660 period and was affected by temporary emigration in plague years).
-
 # Reflection/Assessment
 
 ## Motivations
@@ -33,10 +22,6 @@ Once I had finally gotten all of the data wrangled into a singular tables of rel
 
 In the mean time, I decided I would try and contact the person who had created the original map layer I was interested in, and after some poking around on their ArcGIS Online profile, I discovered them to be a digital history professor at the University of Essex. I had never cold-emailed an academic I had absolutely no connection to before, but I took a chance, and in true professorial spirit, he was incredibly kind and put me in touch with the indviduals who managed data for the [Layers of London project](https://www.layersoflondon.org/), which is where he first obtained his map data. He also suggested a number of resources related to mapping London through using the Bills of Mortality that unfortunately were far outside of the scope of this project, but I'm grateful nonetheless.
 
-The individuals from Layers of London were equally supportive, and soon enough I had two map layers created from [*Morgan's Map of the Whole of London in 1682*](https://www.british-history.ac.uk/no-series/london-map-morgan/1682) and [*John Rocque's Map of London, 1746*](https://www.loc.gov/item/76696823/)
+The individuals from Layers of London were equally supportive, and soon enough I had two map layers created from [*Morgan's Map of the Whole of London in 1682*](https://www.british-history.ac.uk/no-series/london-map-morgan/1682) and [*John Rocque's Map of London, 1746*](https://www.loc.gov/item/76696823/). I knew these would need some modification to be accurate to the parishes found in London in 1665, as both were created following the fire of 1666 which dissolved a number of London's ancient parishes. Through extensive use of records from Ancestry.com, I was able to slowly piece together the parishes featured on both maps given to me with the parish names I had listed from *London's Dreadful Visitation*, a process documented in detail in my [notes file](https://github.com/ChantalMB/HIST3907-dreadful-visitation/blob/master/project-notes.md). I say slowly, because in order to merge these layer I had to use a proper GIS software, QGIS, which a suite of tools I had never touch prior to this. Unfortunately, neither map layer I had extended into the full parishes of Islington, Hackney, and Stepney, but at this point I had been graced with my UK Data Services login, and that promising data I mentioned earlier turned out to be [exactly what I needed](https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=4828)!
 
-
-- Difficult discerning 'old' vs 'new' information
-- Writing challenged me because I didn't necessarily want to write a whole essay due to the web-based format, but I wanted to get all of the key points across --> summarising is HARD
-  - I know this is supposed to be a 12-15pg essay-- the thousands of lines of code I wrote for those visualisations are equivalent in my opinion lol
-- Lack of population data to create relative maps with --> Franklin gave Graunt further credit for acknowledging the overall lack of knowledge in Graunt’s day of the size of the population of London (which was rapidly increasing during the 1603–1660 period and was affected by temporary emigration in plague years).
+The final challenges I faced were mostly techincal; to create the visualisations for this project, I wanted to create truly web-compatible charts unlike what I've done in the past, so I decided to try my hand at using the [D3.js library](https://d3js.org/). It has a reputation for having a steep learning curve compared to other methods of programmed data visualsation, and after having written quite literally thousands of lines of code using it, I can say it has certainly lived up to that reputation. But in the end, I achieved what I intended, so I hope you can enjoy the results!
