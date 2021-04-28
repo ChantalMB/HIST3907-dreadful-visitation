@@ -1,6 +1,6 @@
 # Project Notes
 
-**Digitization**
+### Digitization
 - Found an already transcribed version of text [here](http://name.umdl.umich.edu/A41826.0001.001)
 - Need to input data points into data set --> one big data set most convinent and shouldn't affect data meaning
   - ~First going to quickly put all diseases from each week in a list and identify all unique values~
@@ -55,3 +55,43 @@
     - Will be removing "buried inside/outside the wall" divisions from data for mapping purposes
     - Are Redriff and Rothorith parish the same thing?
     - What happened to St Brides Parish after April?
+
+### Visualisation
+- Graphing
+  - Hm just realized I need to have the "weeks" as the index rather than the column names --> making data transposer
+- Mapping
+  - Merge Mary le Strand and Liberty of Savoy --> St Mary Savoy
+  - Merge Christchurch Southwark with St Saviour Southwark --> Christchurch Southwark was included with the returns of St Saviour Southwark prior to 1671
+    - https://archive.org/details/churchesoflondon00godw/page/n320/mode/1up?q=christ+church
+    -  Reginald H. Adams (1971). The Parish Clerks of London. Phillimore.
+  - St Thomas is St Thomas Southwark
+  - Merge Lincoln's Inn w St Andrew Holborn
+    - https://books.google.ca/books?id=tjEQAAAAYAAJ&redir_esc=y&hl=en
+  - Merge Westminster Abbey with St Margaret Westminster
+  - Merge Liberty of Saffron Hill with St Andrew Holborn
+  - Merge The Temple with Dunstan West
+    - Morgan map boundries
+  - St Augustine is St Austin --> "Owing to the smallness of the parishes, that of St Faith's is united to it, and they are a rectory, the advowson of which is in the dean and chapter of St. Paul's, in whose patronage it appears always to have been, for it is mentioned in their books as early as the year 1181"
+    - https://books.google.ca/books?id=tjEQAAAAYAAJ&redir_esc=y&hl=en
+  - St Anne & St Agnes is St Ann Aldersgate --> Norman naming confusion
+    -  Cobb,G The Old Churches of London: London, Batsford,1942
+  - Holy Trinity the Less is Trinity Parish
+    - Morgan map
+  - St Alban is St Alban Woodstreet
+  - St Martin Pomary is St Martin Iremongerlane
+    - Newcourt, Richard (1708). "St Martin Ironmonger-Lane, Rectory". Repetorium Ecclesiasticum Parochiale Londinense. 1. London. pp. 410–13.
+  - St Edmund the King is St Edmund Lumbardstreet --> only 'the King' in 1670
+    -  Malcolm, James Peller (1803). Londinium Redivivium, or, an Ancient History and Modern Description of London. 3. London. pp. 467–70.
+  - All Hallows London & All Hallows London Wall are 1 parish
+    - Morgan map
+  - Merge St Mary Whitechapel and St Mary Matfellon
+  - Merge Norton Folgate with Leonard Shoreditch
+    - "A parliamentary survey of the property of the Dean and Chapter in 1649 (fn. 12) included ’the Manor of Norton Folgate alias Norton Follye of St. Faiths under Paules London in the parish of St. Leonard Shoreditch’"
+    - "The Manor and Liberty of Norton Folgate," in Survey of London: Volume 27, Spitalfields and Mile End New Town, ed. F H W Sheppard (London: London County Council, 1957), 15-20. British History Online, accessed April 20, 2021, http://www.british-history.ac.uk/survey-london/vol27/pp15-20.
+  - Exclude Liberty of the Tower & Old Tower & The Tower --> wasn't really a place people lived
+    - https://archives.history.ac.uk/history-in-focus/Medical/epichamp.html
+  - Precinct of St Katherine is St Katherine near the Tower
+  - Merge Wapping and St Mary Whitechapel
+  - Merge Shadwell with Stepney
+    - https://archive.org/details/historygreatpla01defogoog
+  - Merge St John Clerkenwel and St James

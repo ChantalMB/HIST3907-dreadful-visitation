@@ -1,0 +1,42 @@
+# Reflection
+1) what your motivation was for taking the approach that you did
+
+2) what you are intending to show/explain
+
+3) what work you did behind the scenes
+- Difficult discerning 'old' vs 'new' information
+- Writing challenged me because I didn't necessarily want to write a whole essay due to the web-based format, but I wanted to get all of the key points across --> summarising is HARD
+  - I know this is supposed to be a 12-15pg essay-- the thousands of lines of code I wrote for those visualisations are equivalent in my opinion lol
+- Lack of population data to create relative maps with --> Franklin gave Graunt further credit for acknowledging the overall lack of knowledge in Graunt’s day of the size of the population of London (which was rapidly increasing during the 1603–1660 period and was affected by temporary emigration in plague years).
+
+# Reflection/Assessment
+
+## Motivations
+
+When we first studied *London's Dreadful Visitation* in Unit 3 of the course, I knew I wanted to create something from it. Although, in the words of John Graunt, I knew the data was likely 'imperfect', when reading over this primary source for the first time, I couldn't help but wonder what those imperfections might reveal. As I've learned during my time as a history student, so much can be discovered where there are silences to be found.
+
+Despite not using his data, I was very much inspired by Graunt's work and his attempt to take a broader look at the Bills of Mortality in 1662. Upon discovering that we were able to do a project for our final assessment, I decided that attempting to do something similar, but with a more modern twist, would be the way to go. I admit, I found reading his *Natural and Political Observations Made Upon the Bills of Mortality* a bit boring, so I felt compelled to make my own version of this data more immersive for the person engaging with it.
+
+With that being said, my approach this project was a combination of trying to represent the movement of disease and London as a whole with user experience design as a foundation.
+
+## Intentions
+
+I began first with the idea of creating a story map-- one that could walk the user through each week or month of the 1665 plague year, highlighting noticeable changes and linking them to further historical inqueries regarding these geographical shifts. Yet when I first implemented this concept, it felt... lackluster. I felt that with all of the data which *London's Dreadful Visitation* provided, a story map was too controlled and did not allow for the exploratory aspect I was hoping for. [The website that is my project](https://a-dreadful-visitation.netlify.app/), is, then, what resulted from my own exploration of how the data I gathered could be visualized or better interacted with. The goal of my final project was transformed into not only highlighting how the disease data of *London's Dreadful Visitation* could reveal commentary about class and London's changing population, but also to create a means for users to make discoveries of their own.
+
+The introduction was simply meant to lead a person into the site, giving context to *London's Dreadful Visitation*, as well as offering a suggestion of the potential which the Bills of Mortality have for learning about the social history of disease. This leads immediately into the interactive component of the site, in hopes of encouraging exploration before explanation. The duel graphs are meant to spatially contrast the number of those buried due to the plague versus those alledgedly buried for other reasons, and the graph below plots deaths caused by every other disease by week, moving in tandem with the maps. Using the slider in between these components, one can look at each week featured in *London's Dreadful Visitation* and observe how the plague moved throughout the city parishes, and how other diseases fluctated alongside this movement. The final streamgraph featured offers a macroscopic view of the other diseases across the entire year which was recorded, simply to show the same data as seen in the bar graphs from another perspective. I then, of course, 'concluded' the website by stating my own thoughts on the data displayed, expanding further on my primary source research from earlier in the semester and also further engaging with secondary sources related to the Bills of Mortality, their creation, and the ideas they themselves create. Rather than just stating the date when referencing a particular moment within the time frame of *London's Dreadful Visitation*, I try to take more of a 'guided exploration' approach by specifiying how someone reading could observe the phenomena discussed through positioning the slider.
+
+## Behind-the-Scenes
+
+Taking a peak behind the curtain of this project, it was an absolute beast to create. If we take it from the beginning of my technical work, it first started with simply gathering the data featured in *London's Dreadful Visitation*. Due to the imperfect scans of the document, OCR tended to be relatively unreliable, but luckily, I was able to find a pre-cleaned OCR copy if this document [digitized by uMich](https://quod.lib.umich.edu/e/eebo2/A41826.0001.001/1:3?rgn=div1;view=fulltext). Of course, this was all HTML formatted for display on the web, so I created a webscraper to retrieve all of the tables from the page, which you can find in the notebooks folder of this repository. I could not figure out a way to keep each table identifiable by week when placed into one document, thus I had to create a separate `.csv` file for each table, then go through the ardious process of merging them all-- the code I created to do this once again, available to view in the notebooks folder.
+
+Once I had finally gotten all of the data wrangled into a singular tables of related elements-- weekly plague deaths by parish, weekly burials by parish, weekly death from other disease-- I was able to start visualisation! Or so I thought... In order to create the maps I desired, I needed a geographically-situated map layer that I could connect my numerical data to. I had come across a promising map layer on ArcGIS Online earlier in the semester that appeared to be exactly what I needed-- a map of London's parishes from 1665. Alas, when I went to export it, I discovered it was not downloadable. I then searched high and low across the internet for some alternative data, but there was nothing except for a singular repository of data that seemed promising, yet it was hosted via the UK Data Service. I am neither a UK citizen nor an academic based in the UK, thus I had to externally register for an account to be made for me (a process which ended up taking a week.
+
+In the mean time, I decided I would try and contact the person who had created the original map layer I was interested in, and after some poking around on their ArcGIS Online profile, I discovered them to be a digital history professor at the University of Essex. I had never cold-emailed an academic I had absolutely no connection to before, but I took a chance, and in true professorial spirit, he was incredibly kind and put me in touch with the indviduals who managed data for the [Layers of London project](https://www.layersoflondon.org/), which is where he first obtained his map data. He also suggested a number of resources related to mapping London through using the Bills of Mortality that unfortunately were far outside of the scope of this project, but I'm grateful nonetheless.
+
+The individuals from Layers of London were equally supportive, and soon enough I had two map layers created from [*Morgan's Map of the Whole of London in 1682*](https://www.british-history.ac.uk/no-series/london-map-morgan/1682) and [*John Rocque's Map of London, 1746*](https://www.loc.gov/item/76696823/)
+
+
+- Difficult discerning 'old' vs 'new' information
+- Writing challenged me because I didn't necessarily want to write a whole essay due to the web-based format, but I wanted to get all of the key points across --> summarising is HARD
+  - I know this is supposed to be a 12-15pg essay-- the thousands of lines of code I wrote for those visualisations are equivalent in my opinion lol
+- Lack of population data to create relative maps with --> Franklin gave Graunt further credit for acknowledging the overall lack of knowledge in Graunt’s day of the size of the population of London (which was rapidly increasing during the 1603–1660 period and was affected by temporary emigration in plague years).
